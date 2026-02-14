@@ -1,0 +1,354 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #4CAF50;
+  padding-bottom: 15px;
+}
+
+.header-content h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: #212529;
+}
+
+.header-content p {
+  font-size: 14px;
+  color: #6c757d;
+}
+
+.header-nav {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-button {
+  background: none;
+  border: none;
+  padding: 8px 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.nav-button.active {
+  background-color: #4CAF50;
+  color: white;
+  box-shadow: 0 2px 5px rgba(76, 175, 80, 0.3);
+}
+
+/* Tab selector styles */
+.tab-selector {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 25px;
+  gap: 15px;
+}
+
+.tab-button {
+  background: white;
+  border: none;
+  padding: 18px 15px;
+  border-radius: 12px;
+  width: 30%;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+.tab-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.tab-button.active {
+  background-color: #4CAF50;
+  color: white;
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.25);
+}
+
+.tab-button.active .tab-icon,
+.tab-button.active .tab-label,
+.tab-button.active .tab-subtitle {
+  color: white;
+}
+
+.tab-icon {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.tab-label {
+  font-weight: 600;
+  margin-bottom: 4px;
+  font-size: 16px;
+}
+
+.tab-subtitle {
+  font-size: 13px;
+  text-align: center;
+  opacity: 0.8;
+}
+
+/* Period selector styles */
+.period-selector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+  position: relative;
+  padding: 10px;
+}
+
+.period-button {
+  background: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  margin: 0 8px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 1px solid #ddd;
+}
+
+.period-button:hover {
+  background-color: #f8f9fa;
+}
+
+.period-button.active {
+  background-color: #4CAF50;
+  color: white;
+  border: 1px solid #4CAF50;
+}
+
+.current-period {
+  position: absolute;
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-size: 15px;
+  font-weight: 500;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+/* Stats cards styles */
+.stats-cards {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+  gap: 20px;
+}
+
+.stat-card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  width: 30%;
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-card h3 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #6c757d;
+  margin-bottom: 10px;
+}
+
+.stat-value {
+  font-size: 28px;
+  font-weight: 700;
+  color: #4CAF50;
+  margin-bottom: 5px;
+}
+
+.stat-subtitle {
+  font-size: 13px;
+  color: #6c757d;
+}
+
+/* Ranking table styles */
+.ranking-table {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+}
+
+.ranking-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ranking-table th {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 15px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.ranking-table td {
+  padding: 16px 15px;
+  border-bottom: 1px solid #e9ecef;
+  font-size: 15px;
+}
+
+.ranking-table tr:hover {
+  background-color: #f8f9fa;
+}
+
+.gold {
+  color: #FFD700;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.silver {
+  color: #C0C0C0;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.bronze {
+  color: #CD7F32;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.name {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.group {
+  display: block;
+  font-size: 13px;
+  color: #6c757d;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .tab-selector {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .tab-button {
+    width: 100%;
+  }
+  
+  .stats-cards {
+    flex-direction: column;
+  }
+  
+  .stat-card {
+    width: 100%;
+  }
+}
+
+/* === Стили под скриншоты: закруглённые кнопки, ALS Sirius, цвета === */
+
+.period-selector {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.period-selector button {
+  min-width: 120px;
+  height: 44px;
+  font-family: 'ALS Sirius', 'Segoe UI', 'Roboto', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  border-width: 2px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  /* Закругление как на скриншоте — очень плавное */
+  border-radius: 32px;
+}
+
+/* Активная кнопка (нижняя) — зелёная, крупная */
+.period-selector button[style*="background-color: #0E9344"] {
+  padding: 0 24px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Для мобильных — чуть меньше */
+@media (max-width: 640px) {
+  .period-selector button {
+    min-width: 100px;
+    padding: 0 16px;
+    font-size: 14px;
+  }
+}
+
+/* Выпадающее меню — тоже с закруглением 32px */
+.period-selector .absolute {
+  border-radius: 32px;
+  overflow: hidden;
+}
+
+.period-selector ul {
+  list-style: none;
+}
+
+.period-selector li button {
+  padding: 12px 20px;
+  font-size: 15px;
+  color: #090909;
+  text-align: left;
+  transition: all 0.25s ease;
+}
+
+.period-selector li button:hover {
+  background-color: #F5F7FA;
+  color: #0E9344;
+}
+
+/* Заголовок меню */
+.period-selector .p-3.font-semibold {
+  background-color: #F9FAFB;
+  color: #090909;
+  border-bottom: 1px solid #E5E7EB;
+}
+
