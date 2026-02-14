@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Profile.css';
 
 const Profile = () => {
@@ -42,10 +43,10 @@ const Profile = () => {
         <h1>Лидерборд ИШИТР+</h1>
         <p>Система учета и мотивации</p>
       </div>
-        <nav className="nav-links">
-          <a href="#" className="nav-link"><span>🏠</span> Главная</a>
-          <a href="#" className="nav-link active"><span>👤</span> Личный кабинет</a>
-        </nav>
+      <nav className="nav-links">
+        <Link to="/" className="nav-link">Главная</Link>
+        <Link to="/profile" className="nav-link active">Личный кабинет</Link>
+      </nav>
       </header>
 
       {/* Main Content */}
@@ -122,7 +123,6 @@ const Profile = () => {
         {/* Achievements */}
         <div className="achievements-section card">
           <div className="section-header">
-            <span>🏆</span>
             <h3>Мои ачивки</h3>
           </div>
           <div className="achievements-grid">

@@ -425,3 +425,9 @@ body {
     flex: 0 0 calc(50% - 10px);
   }
 }
+
+.nav-button,
+.nav-link {
+  text-decoration: none;   /* убрать подчеркивание */
+  color: inherit;          /* взять цвет от родителя */
+}
