@@ -155,7 +155,6 @@ const Profile = () => {
             ))}
           </div>
           <div className="chart-footer">
-            <button className="month-btn">&lt; октябрь 2025 &gt;</button>
             <span className="avg-hours">Средняя активность: {profileData.avgHours} часа</span>
           </div>
         </div>
